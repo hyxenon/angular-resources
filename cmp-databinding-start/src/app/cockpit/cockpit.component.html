@@ -1,0 +1,36 @@
+<form>
+  <div>
+    <label for="serverName" class="">Server Name:</label>
+    <!-- <input
+      type="text"
+      name="serverName"
+      id="serverName"
+      class="form-control"
+      placeholder="Server Name"
+      [(ngModel)]="newServerName"
+    /> -->
+    <input type="text" class="form-control" #serverNameInput>
+  </div>
+  <div>
+    <label for="serverContent" class="">Server Content:</label>
+    <!-- <input
+      type="text"
+      name="serverContent"
+      id="serverContent"
+      class="form-control"
+      placeholder="Server Content"
+      [(ngModel)]="newServerContent"
+    /> -->
+    <input
+      type="text"
+      name="serverContent"
+      id="serverContent"
+      class="form-control"
+      placeholder="Server Content"
+      #serverContentInput
+    />
+  </div>
+  <button class="btn btn-success" (click)="onAddServer(serverNameInput)">Add Server</button>
+  <button class="btn btn-primary" (click)="onBlueprint(serverNameInput)">Add Blue Print</button>
+</form>
+<hr />

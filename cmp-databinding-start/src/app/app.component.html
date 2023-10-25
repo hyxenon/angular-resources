@@ -1,0 +1,14 @@
+<nav class="navbar bg-primary">
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <app-cockpit (onServerCreated)="onServerClick($event)" (onBlueprintCreated)="onBlueprintClick($event)"></app-cockpit>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6" >
+      <app-server-element *ngFor="let element of serverElements" [element]="element"></app-server-element>
+    </div>
+  </div>
+</div>
